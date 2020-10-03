@@ -1,11 +1,11 @@
 ==========================
-Knock Subdomain Scan v.4.1.1
+Knock Subdomain Scan v3.0.0
 ==========================
 
 **Knockpy** is a python tool designed to enumerate subdomains on a target domain through a wordlist. It is designed to scan for **DNS zone transfer** and to try to bypass the **wildcard DNS record** automatically if it is enabled. Now knockpy supports queries to VirusTotal subdomains, you can setting the API_KEY within the config.json file.
 
 .. image:: https://www.paypalobjects.com/en_US/IT/i/btn/btn_donateCC_LG.gif
-   :target: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LWNAWQ9G6APU2
+   :target: https://paypal.me/amustaque97
 
 **Very simply**
 
@@ -32,7 +32,7 @@ Install
 
 **Prerequisites**
 
-- Python 2.7.6
+- Python 3
 
 **Dependencies**
 
@@ -40,22 +40,21 @@ Install
 
 .. code-block:: 
   
-  $ sudo apt-get install python-dnspython
+  $ pip3 install dnspython
   
 
 **Installing**
 
 .. code-block::
 
-  $ git clone https://github.com/guelfoweb/knock.git
+  $ git clone https://github.com/amustaque97/KnockV3.git
   
   $ cd knock
   
   Set your virustotal API_KEY:
   
-  $ nano knockpy/config.json
+  $ nano config.json
   
-  $ sudo python setup.py install
 
 Note that it's recommended to use `Google DNS <https://developers.google.com/speed/public-dns/docs/using>`_: 8.8.8.8 and 8.8.4.4
 
@@ -70,9 +69,9 @@ Knockpy arguments
   ___________________________________________
   
   knock subdomain scan
-  knockpy v.4.1
-  Author: Gianni 'guelfoweb' Amato
-  Github: https://github.com/guelfoweb/knock
+  knockpy v3.0.0
+  Author: Mustaque Ahmed
+  Github: https://github.com/amustaque97/KnockV3
   ___________________________________________
   
   positional arguments:
@@ -237,14 +236,9 @@ Talk about
 
 `Ethical Hacking and Penetration Testing Guide <http://www.amazon.com/Ethical-Hacking-Penetration-Testing-Guide/dp/1482231611>`_ Book by Rafay Baloch.
 
-Knockpy comes pre-installed on the following security distributions for penetration test:
-
-- `BackBox Linux <http://www.backbox.org/>`_
-- `PentestBox for Windows <https://pentestbox.org/>`_
-- `Buscador Investigative Operating System <https://inteltechniques.com/buscador/>`_
 
 =====
 Other
 =====
 
-This tool is currently maintained by `Gianni 'guelfoweb' Amato <http://guelfoweb.com/>`_, who can be contacted at guelfoweb@gmail.com or twitter `@guelfoweb <http://twitter.com/guelfoweb>`_. Suggestions and criticism are welcome.
+This tool was created by `Gianni Amato (@guelfoweb)`_ and is currently maintained by `Mustaque Ahmed`_, who can be contacted at amustaque97@gmail.com or twitter `@amustaque97 <http://twitter.com/guelfoweb>`_. Feedback and criticism are welcome.
