@@ -241,4 +241,4 @@ Talk about
 Other
 =====
 
-This tool was created by `Gianni Amato (@guelfoweb)` and is currently maintained by `Mustaque Ahmed`, who can be contacted at amustaque97@gmail.com or twitter `@amustaque97 <http://twitter.com/amustaque97>`_. Feedback and criticism are welcome.
+This tool was created by `Gianni Amato (@guelfoweb <https://twitter.com/guelfoweb>)`_ and is currently maintained by `Mustaque Ahmed`_, who can be contacted at amustaque97@gmail.com or twitter `@amustaque97 <https://twitter.com/amustaque97>`_. Feedback and criticism are welcome.
