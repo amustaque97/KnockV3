@@ -11,9 +11,9 @@ Knock Subdomain Scan v3.0.0
 
 .. code-block:: 
   
-  $ knockpy domain.com
+  $ python3 knock.py domain.com
 
-.. figure:: https://user-images.githubusercontent.com/41558/29026398-dcd76fba-7b7b-11e7-9aa8-344637522c76.png
+.. figure:: https://user-images.githubusercontent.com/21127788/94997130-dcbd7780-05c6-11eb-9ca3-e54b657592dc.png
    :align: center
    :width: 90%
    :figwidth: 85%
@@ -63,8 +63,8 @@ Knockpy arguments
 
 .. code-block:: 
 
-  $ knockpy -h
-  usage: knockpy [-h] [-v] [-w WORDLIST] [-r] [-c] [-j] domain
+  $ python3 knock.py -h
+  usage: python3 knock.py [-h] [-v] [-w WORDLIST] [-r] [-c] [-j] domain
   
   ___________________________________________
   
@@ -87,11 +87,11 @@ Knockpy arguments
     -j, --json      export full report in JSON
   
   example:
-    knockpy domain.com
-    knockpy domain.com -w wordlist.txt
-    knockpy -r domain.com or IP
-    knockpy -c domain.com
-    knockpy -j domain.com
+    python3 knock.py domain.com
+    python3 knock.py domain.com -w wordlist.txt
+    python3 knock.py -r domain.com or IP
+    python3 knock.py -c domain.com
+    python3 knock.py -j domain.com
 
 For virustotal subdomains support you can setting your API_KEY in the config.json file.
 
@@ -103,19 +103,19 @@ Example
 
 .. code-block::
 
-  $ knockpy domain.com
+  $ python3 knock.py domain.com
 
 **Subdomain scan with external wordlist**
 
 .. code-block:: 
 
-  $ knockpy domain.com -w wordlist.txt
+  $ python3 knock.py domain.com -w wordlist.txt
 
 **Resolve domain name and get response headers**
 
 .. code-block:: 
 
-  $ knockpy -r domain.com [or IP]
+  $ python3 knock.py -r domain.com [or IP]
 
 .. code-block::
 
@@ -218,13 +218,13 @@ Example
 
 .. code-block:: 
 
-  $ knockpy -c domain.com
+  $ python3 knock.py -c domain.com
 
 **Export full report in JSON**
 
 .. code-block:: 
 
-  $ knockpy -j domain.com
+  $ python3 knock.py -j domain.com
 
 
 ==========
@@ -241,4 +241,4 @@ Talk about
 Other
 =====
 
-This tool was created by `Gianni Amato (@guelfoweb)`_ and is currently maintained by `Mustaque Ahmed`_, who can be contacted at amustaque97@gmail.com or twitter `@amustaque97 <http://twitter.com/guelfoweb>`_. Feedback and criticism are welcome.
+This tool was created by `Gianni Amato (@guelfoweb)` and is currently maintained by `Mustaque Ahmed`, who can be contacted at amustaque97@gmail.com or twitter `@amustaque97 <http://twitter.com/amustaque97>`_. Feedback and criticism are welcome.
