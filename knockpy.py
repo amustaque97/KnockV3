@@ -112,7 +112,7 @@ def init(text, resp=False):
 	else:
 		print(text, end='')
 
-def main():
+def main(root_domain=None, wordlist=None, host=None, csv=None, csv_fields=None, save_json=None):
 	parser = argparse.ArgumentParser(
 		formatter_class=argparse.RawTextHelpFormatter,
 		prog='knockpy',
@@ -131,15 +131,23 @@ def main():
 	parser.add_argument('-j', '--json', help='export full report in JSON',
 						action='store_true', required=False)
 
+	
+	if root_domain is None and wordlist is None and host is None and csv is None and csv_fields is None and save_json is None:
+		args = parser.parse_args()
 
-	args = parser.parse_args()
-
-	target = args.domain
-	wlist = args.wordlist
-	resolve_host = args.resolve
-	save_scan_csv = args.csv
-	save_scan_csvfields = args.csvfields
-	save_scan_json = args.json
+		target = args.domain
+		wlist = args.wordlist
+		resolve_host = args.resolve
+		save_scan_csv = args.csv
+		save_scan_csvfields = args.csvfields
+		save_scan_json = args.json
+	else:
+		target = root_domain
+		wlist = wordlist
+		resolve_host = host
+		save_scan_csv = csv
+		save_scan_csvfields = csv_fields
+		save_scan_json = save_json
 
 	print_header()
 
@@ -265,10 +273,12 @@ def main():
 	'''
 	optional argument -r RESOLVE DOMAIN
 	'''
-	if resolve_host:
+	if resolve_host and host is False:
 		response_resolve = json.dumps(response_resolve, indent=4, separators=(',', ': '))
 		print(response_resolve)
 		exit()
+	elif resolve_host and host:
+		return response_resolve
 
 	'''
 	scan for subdomain
@@ -357,6 +367,9 @@ def main():
 	except:
 		pass
 
+	if root_domain is not None:
+		return subdomain_found
+	
 	if not resolve_host:
 		if save_scan_csv:
 			exit(save_report.export(target, subdomain_csv_list, 'csv'))
